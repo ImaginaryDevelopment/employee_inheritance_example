@@ -15,7 +15,7 @@
 
     member val Name = name with get,set
     member val BaseSalary = baseSalary with get,set
-    member val ID = employeeCount - 1 with get,set
+    member val ID = employeeCount with get,set
     // implicit conversion not allowed
     override this.ToString() = string this.ID + " " + this.Name
 
