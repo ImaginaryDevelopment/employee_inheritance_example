@@ -3,5 +3,5 @@
 
 type TechnicalEmployee(name) =
     inherit Employee(name,75_000.0)
-    member val successfulCheckIns = 5 with get,set
-    override this.employeeStatus() = this.toString() + " has " + string this.successfulCheckIns + " successful check ins";
+    member val SuccessfulCheckIns = 5 with get,set
+    override this.EmployeeStatus() = this.ToString() + " has " + string this.SuccessfulCheckIns + " successful check ins"

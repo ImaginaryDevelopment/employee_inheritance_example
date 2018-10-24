@@ -1,2 +1,2 @@
-﻿to show examples of it in F# and do the translation to F# for reference/learning
-this branch will try to stay as close in implementation as attention span/time permits
+﻿walk the code a step or two at a time towards idiomatic F# 
+F# with an F# dialect instead of F# with a C# dialect

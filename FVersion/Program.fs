@@ -8,12 +8,12 @@ open Module2TutorialLab1
 [<EntryPoint>]
 let main _argv =
     //printfn "%A" argv
-    let employee1 = new TechnicalEmployee("Libby");
-    let employee2 = new TechnicalEmployee("Zaynah");
-    let employee3 = new BusinessEmployee("Winter");
+    let employee1 = new TechnicalEmployee("Libby")
+    let employee2 = new TechnicalEmployee("Zaynah")
+    let employee3 = new BusinessEmployee("Winter")
 
-    Console.WriteLine(employee1.employeeStatus() + "..." +
-                employee2.employeeStatus() + "..." + employee3.employeeStatus());
+    Console.WriteLine(employee1.EmployeeStatus() + "..." +
+                employee2.EmployeeStatus() + "..." + employee3.EmployeeStatus())
 
     // so that I can see the results when I run it in VS without the text immediately dissapearing
     Console.ReadLine() |> ignore
