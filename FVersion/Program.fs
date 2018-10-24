@@ -8,12 +8,19 @@ open Module2TutorialLab1
 [<EntryPoint>]
 let main _argv =
     //printfn "%A" argv
-    let employee1 = new TechnicalEmployee("Libby")
-    let employee2 = new TechnicalEmployee("Zaynah")
-    let employee3 = new BusinessEmployee("Winter")
+    let employees =
+        [
+            TechnicalEmployee("Libby") :> Employee
+            upcast TechnicalEmployee("Zaynah")
+            upcast BusinessEmployee("Winter")
+        ]
+    let statuses = employees |> Seq.map (fun e -> e.EmployeeStatus())
 
-    Console.WriteLine(employee1.EmployeeStatus() + "..." +
-                employee2.EmployeeStatus() + "..." + employee3.EmployeeStatus())
+    String.Join("...", statuses)
+    |> printfn "%s"
+    statuses
+    |> Seq.reduce(fun e1 e2 -> sprintf "%s...%s" e1 e2)
+    |> printfn "%s"
 
     // so that I can see the results when I run it in VS without the text immediately dissapearing
     Console.ReadLine() |> ignore

@@ -1,2 +1,1 @@
-﻿walk the code a step or two at a time towards idiomatic F# 
-F# with an F# dialect instead of F# with a C# dialect
+﻿the deep end: advanced usages/ideas

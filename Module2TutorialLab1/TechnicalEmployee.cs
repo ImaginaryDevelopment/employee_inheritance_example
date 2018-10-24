@@ -13,7 +13,8 @@ namespace Module2TutorialLab1
 
         }
 
-        public int successfulCheckIns = 5;
+        // public fields are to be avoided
+        int successfulCheckIns = 5;
 
         public override string EmployeeStatus()
         {

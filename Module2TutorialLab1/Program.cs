@@ -10,12 +10,20 @@ namespace Module2TutorialLab1
     {
         static void Main(string[] args)
         {
-            var employee1 = new TechnicalEmployee("Libby");
-            var employee2 = new TechnicalEmployee("Zaynah");
-            var employee3 = new BusinessEmployee("Winter");
+            // new employee array
+            var employees = new Employee[]
+            {
+                new TechnicalEmployee("Libby"),
+                new TechnicalEmployee("Zaynah"),
+                new BusinessEmployee("Winter")
+            };
 
-            Console.WriteLine(employee1.EmployeeStatus() + "..." + 
-                employee2.EmployeeStatus() + "..." + employee3.EmployeeStatus());
+            var statuses = employees.Select(e => e.EmployeeStatus());
+
+            Console.WriteLine(String.Join("...", statuses));
+            Console.WriteLine("alternatively:");
+            Console.WriteLine(statuses.Aggregate((es1, es2) => es1 + "..." + es2));
+            Console.ReadLine();
         }
     }
 }

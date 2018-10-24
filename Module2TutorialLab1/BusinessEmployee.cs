@@ -10,14 +10,14 @@ namespace Module2TutorialLab1
     {
         public BusinessEmployee(string name) : base(name, 50_000)
         {
-
         }
+
         // this isn't used elsewhere in the app, and fields generally shouldn't be public
-        double BonusBudget = 1_000;
+        readonly double bonusBudget = 1_000;
 
         public override string EmployeeStatus()
         {
-            return ToString() + " with a budget of " + this.BonusBudget;
+            return ToString() + " with a budget of " + this.bonusBudget;
         }
 
     }
