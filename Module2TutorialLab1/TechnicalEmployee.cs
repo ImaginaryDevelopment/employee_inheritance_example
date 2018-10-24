@@ -8,16 +8,16 @@ namespace Module2TutorialLab1
 {
     class TechnicalEmployee : Employee
     {
-        public TechnicalEmployee(string name) : base(name, 75000)
+        public TechnicalEmployee(string name) : base(name, 75_000)
         {
 
         }
 
         public int successfulCheckIns = 5;
 
-        public override string employeeStatus()
+        public override string EmployeeStatus()
         {
-            return this.toString() + " has " + this.successfulCheckIns + " successful check ins";
+            return this.ToString() + " has " + this.successfulCheckIns + " successful check ins";
         }
     }
 }

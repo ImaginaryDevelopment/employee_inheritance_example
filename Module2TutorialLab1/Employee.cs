@@ -8,78 +8,52 @@ namespace Module2TutorialLab1
 {
     abstract class Employee
     {
-        private string employeeName;
-        private double employeeBaseSalary;
-        private int employeeId;
 
-        public string Name
-        {
-            get
-            {
-                return employeeName;
-            }
-
-            set
-            {
-                employeeName = value;
-            }
-        }
-        public double BaseSalary
-        {
-            get
-            {
-                return employeeBaseSalary;
-            }
-            set
-            {
-                employeeBaseSalary = value;
-            }
-        }
-        public int ID
-        {
-            get
-            {
-                return employeeId;
-            }
-            set
-            {
-                employeeId = value;
-            }
-        }
-
+        // nothing special going on, expanded properties not needed/useful
+        public string Name { get; set; }
+        public double BaseSalary { get; set; }
+        public int ID { get; set; }
 
         public Employee(string name, double baseSalary)
         {
             this.Name = name;
             this.BaseSalary = baseSalary;
-            this.ID = employeeCount++;
+            // instead of employeeCount++;
+            // increment before passing the result
+            this.ID = ++employeeCount;
         }
 
-        public double getBaseSalary()
-        {
-            return this.BaseSalary;
-        }
+        // this is already exposed via the property directly
+        //public double GetBaseSalary()
+        //{
+        //    return this.BaseSalary;
+        //}
 
-        public string getName()
-        {
-            return this.Name;
-        }
 
-        private static int employeeCount = 1;
+        // this is already exposed via the property directly
+        //public string GetName()
+        //{
+        //    return this.Name;
+        //}
 
-        public int getEmployeeID()
-        {
-            return this.ID;
-        }
+        // private is implied
+        static int employeeCount;
 
-        public string toString()
+        // this is already exposed via the property directly
+        // PascalCase for members
+        //public int GetEmployeeID()
+        //{
+        //    return this.ID;
+        //}
+
+        // this should be ToString in C#, not toString
+        public override string ToString()
         {
             return this.ID + " " + this.Name;
         }
 
-        public abstract string employeeStatus();
-        
-        
+        // PascalCase for members
+        public abstract string EmployeeStatus();
 
 
     }

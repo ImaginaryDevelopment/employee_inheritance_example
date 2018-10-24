@@ -1,0 +1,2 @@
+﻿this branch is meant to address redundant methods, and extraneous usage of syntax for the sake of learning/example
+also some C# subjective styling

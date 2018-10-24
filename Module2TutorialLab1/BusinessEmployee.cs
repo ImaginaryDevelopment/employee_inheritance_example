@@ -12,12 +12,12 @@ namespace Module2TutorialLab1
         {
 
         }
-        
-        public double bonusBudget = 1_000;
+        // this isn't used elsewhere in the app, and fields generally shouldn't be public
+        double BonusBudget = 1_000;
 
-        public override string employeeStatus()
+        public override string EmployeeStatus()
         {
-            return toString() + " with a budget of " + this.bonusBudget;
+            return ToString() + " with a budget of " + this.BonusBudget;
         }
 
     }

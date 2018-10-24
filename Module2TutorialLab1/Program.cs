@@ -14,8 +14,8 @@ namespace Module2TutorialLab1
             var employee2 = new TechnicalEmployee("Zaynah");
             var employee3 = new BusinessEmployee("Winter");
 
-            Console.WriteLine(employee1.employeeStatus() + "..." + 
-                employee2.employeeStatus() + "..." + employee3.employeeStatus());
+            Console.WriteLine(employee1.EmployeeStatus() + "..." + 
+                employee2.EmployeeStatus() + "..." + employee3.EmployeeStatus());
         }
     }
 }
