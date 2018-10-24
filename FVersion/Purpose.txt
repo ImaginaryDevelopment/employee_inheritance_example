@@ -1,0 +1,2 @@
+﻿to show examples of it in F# and do the translation to F# for reference/learning
+this branch will try to stay as close in implementation as attention span/time permits
